@@ -1,11 +1,11 @@
 # html-project
 
-> Create a commonjs module with [grunt-init][], including Nodeunit unit tests.
+> Create an html project with SASS ( Compass, Bourbon, Neat and Toffee ).
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
 ## Installation
-If you haven't already done so, install [grunt-init][].
+If you haven't already done so, install [grunt-init](https://github.com/gruntjs/grunt-init).
 
 Once grunt-init is installed, place this template in your `~/.grunt-init/` directory.
 
