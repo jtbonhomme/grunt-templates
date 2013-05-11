@@ -1,6 +1,10 @@
-# html-project
+# HTML Project
 
-> Create an html project with SASS ( Compass, Bourbon, Neat and Toffee ).
+This GruntJS template is very useful for scaffolding an HTML project. It uses SASS; [Compass](http://compass-style.org/), [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/) and Toffee ( an tiny HTML class grid based on Neat ). 
+
+It also supports jQuery version 1.9.1 through CDN and local as a backup, when CDN fails.
+
+Thereby it generates a Gruntfile.js which supports [uglify](https://github.com/gruntjs/grunt-contrib-uglify), the [Jasmine Testing](https://github.com/gruntjs/grunt-contrib-jasmine) framework and the [Grunt Watch](https://github.com/gruntjs/grunt-contrib-watch) command.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
