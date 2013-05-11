@@ -15,7 +15,7 @@ git clone git@github.com:stefanvermaas/grunt-templates.git
 Than move the templates you want to use to the grunt-init folder.
 ```
 # linux
-cp -r templates/template-name ~/.grunt-init/template-name
+cp -r template-name/ ~/.grunt-init/template-name
 ```
 
 Now the template is saved to the grunt-init folder and you can use the grunt-init command to generate a new project.
