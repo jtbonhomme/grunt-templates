@@ -47,9 +47,9 @@ exports.template = function(grunt, init, done) {
     props.keywords = [];
     props.devDependencies = {
       'grunt-contrib-uglify': '~0.1.1',
-      'grunt-contrib-jshint': '~0.1.1',
       'grunt-contrib-watch': '~0.2.0',
-    };
+      'grunt-contrib-jasmine': '~0.4.2',
+    };    
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
