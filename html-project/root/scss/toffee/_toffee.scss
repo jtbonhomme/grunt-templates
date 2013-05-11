@@ -1,0 +1,116 @@
+/*
+
+    TOFFEE
+    ==========================================
+
+    Toffee is a really small HTML grid system based upon Neat and Bourbon. Both frameworks
+    deserve all the credits for being awesome.
+
+    Toffee is authored by Stefan Vermaas.
+    @stefanvermaas
+
+    Current version: 0.0.1
+
+	Table of contents
+	==============================
+	1. Grid settings	
+	2. Build the grid
+*/
+
+/* -------------------------------------- *\
+    1. Grid settings
+\* -------------------------------------- */
+@import "toffee-settings";
+
+/* -------------------------------------- *\
+    2. The grid
+\* -------------------------------------- */
+.row {
+	@include row;
+	float: left;
+	width: 100%;
+}
+
+.container { @include outer-container; }
+.column { @include span-columns( 12 ); }
+
+// Create the default columns
+@for $i from 1 through $grid-columns {
+    
+    // Make a default column
+    .column-#{$i} { @include span-columns($i); }
+    
+    // Create a default offset
+    .offset-by-#{$i} { @include shift( $i ); }
+}
+
+// Create the small columns
+@include media( $small ) {
+
+    // Give the container some spacing
+    .container { @if $small-spacing { padding: 0 #{$gutter}; } }
+    
+    // Make sure other's are 100%
+    [class*="column-"] { width: 100%; margin-right: 0; margin-left: 0; }
+    
+    // Make a normal class for every column   
+    @for $i from 1 through $grid-columns {
+        .row .small-#{$i} { @include span-columns( $i ); }
+    }
+    
+    // Make a normal offset class
+    @for $i from 1 through $grid-columns - 2 {
+        .small-offset-by-#{$i} { @include shift( $i ); }
+    } 	
+}
+
+// Create the medium columns
+@include media( $medium ) {
+    
+    // Give the container some spacing
+    .container { @if $medium-spacing { padding: 0 #{$gutter}; } }
+    
+    // Make a normal class for every column   
+    @for $i from 1 through $grid-columns {
+        .row .medium-#{$i} { @include span-columns( $i ); }
+    }
+    
+    // Make a normal offset class
+    @for $i from 1 through $grid-columns - 2 {
+        .medium-offset-by-#{$i} { @include shift( $i ); }
+    }	
+}
+
+// Create the normal columns
+@include media( $normal ) {
+
+    // Give the container some spacing
+    .container { @if $normal-spacing { padding: 0 #{$gutter}; } }    
+    
+    // Make a normal class for every column   
+    @for $i from 1 through $grid-columns {
+        .row .normal-#{$i} { @include span-columns( $i ); }        
+    }
+    
+    // Make a normal offset class
+    @for $i from 1 through $grid-columns - 2 {
+        .normal-offset-by-#{$i} { @include shift( $i ); }
+    }	
+}
+
+// Create the large columns
+@include media( $large ) {
+    
+    // Give the container some spacing
+    .container { @if $large-spacing { padding: 0 #{$gutter}; } }    
+    
+    // Make a normal class for every column   
+    @for $i from 1 through $grid-columns {
+        .row .large-#{$i} { @include span-columns( $i ); }
+    }
+    
+    // Make a normal offset class
+    @for $i from 1 through $grid-columns - 2 {
+        .large-offset-by-#{$i} { @include shift( $i ); }
+    }	
+}

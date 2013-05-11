@@ -1,0 +1,30 @@
+/* -------------------------------------- *\
+    1. Grid settings
+\* -------------------------------------- */
+
+// Columns
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+$small-columns: 4;
+$max-width: 1024px;
+
+// Padding
+$small-spacing: true;
+$medium-spacing: true;
+$normal-spacing: false;
+$large-spacing: false;
+
+/* -------------------------------------- *\
+    2. Import external libraries
+\* -------------------------------------- */
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+
+/* -------------------------------------- *\
+    3. Breakpoints
+\* -------------------------------------- */
+$small: new-breakpoint( max-width 480px $small-columns );
+$medium: new-breakpoint( min-width 480px max-width 1024px );
+$normal: new-breakpoint( min-width 1024px max-width 1280px );
+$large: new-breakpoint( min-width 1280px );
