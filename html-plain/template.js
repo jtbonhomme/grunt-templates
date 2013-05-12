@@ -9,7 +9,7 @@
 'use strict';
 
 // Basic template description.
-exports.description = 'Create a basic HTML(5) project with SASS (Compass, Bourbon, Neat and Toffee)';
+exports.description = 'Create a basic HTML5 project based on the HTML5 boilerplate';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '';
