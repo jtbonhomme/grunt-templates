@@ -18,10 +18,10 @@ Than move the templates you want to use to the grunt-init folder.
 cp -r template-name/ ~/.grunt-init/template-name
 ```
 
-Now the template is saved to the grunt-init folder and you can use the grunt-init command to generate a new project.
+Now the template is saved to the grunt-init folder and you can use the grunt-init command to create a new project. First we make a new direction and than we fill the newly created project with some basic content.
 
 ```
-grunt-init template-name
+mkdir my-project && grunt-init template-name
 ```
 
 ## License
